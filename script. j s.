@@ -1,0 +1,21 @@
+function simulateCompression() {
+    const fileInput = document.getElementById('audioFile');
+    const status = document.getElementById('status');
+
+    if(fileInput.files.length === 0) {
+        alert("Please select a file!");
+        return;
+    }
+
+    const file = fileInput.files[0];
+    const originalSize = (file.size / 1024).toFixed(2); // KB
+
+    // Simulate compression
+    const compressedSize = (file.size * 0.5 / 1024).toFixed(2); // 50% smaller
+
+    status.innerHTML = `
+        Original size: ${originalSize} KB<br>
+        Compressed size: ${compressedSize} KB<br>
+        Compression ratio: 50%
+    `;
+}
