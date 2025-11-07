@@ -1,2 +1,2 @@
 # LPC-audio
-Web-based LPC audio compression simulator
+Web-based LPC audio compression 
